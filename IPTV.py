@@ -10,6 +10,7 @@ stop_thread = False
 channel1 = "https://cdn.gunadarma.ac.id/streams/ugtv/ingestugtv_high.m3u8"
 channel2 = "https://video.detik.com/transtv/smil:transtv.smil/chunklist_w1637227557_b744100_sleng.m3u8"
 channel3 = "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8"
+channel4 = "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8"
 
 
 def playstream(m3u8_url):
@@ -74,7 +75,9 @@ btn_chn2.place(relx=0.5, rely=0.18, anchor="center")
 btn_chn3 = tk.Button(frametombol, text="CNBC Indonesia", font=("Helvetica", 15), fg="#FFFFFF", bg="#4CAF50",
                      activebackground="#45a049", command=lambda: change_channel(channel3))
 btn_chn3.place(relx=0.5, rely=0.26, anchor="center")
-
+btn_chn4 = tk.Button(frametombol, text="Trans 7", font=("Helvetica", 15), fg="#FFFFFF", bg="#4CAF50",
+                     activebackground="#45a049", command=lambda: change_channel(channel4))
+btn_chn4.place(relx=0.5, rely=0.34, anchor="center")
 
 def on_closing():  # Pencet tombol X di Window
     global player, stop_thread
